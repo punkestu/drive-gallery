@@ -103,11 +103,13 @@ export default function Gallery() {
       </section>
 
       <Modal isOpen={selectedimageid} onClose={() => setSelectedimageid(null)}>
-        <img
-          src={`https://drive.google.com/thumbnail?id=${selectedimageid}&sz=w1600`}
-          width={1600}
-          alt="Selected Image"
-        />
+        <div className="max-h-[80vh] overflow-auto">
+          <img
+            src={`https://drive.google.com/thumbnail?id=${selectedimageid}&sz=w1600`}
+            width={1600}
+            alt="Selected Image"
+          />
+        </div>
         <a
           className="flex w-full gap-1 bg-red-900 text-white font-semibold justify-center items-center p-2 rounded-md mt-4"
           href={`https://drive.google.com/uc?export=download&id=${selectedimageid}`}
