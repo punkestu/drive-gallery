@@ -1,18 +1,27 @@
-# React + Vite
+# SOREAJA Drive Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React app that turns a public Google Drive folder of images into a browsable photo gallery. Paste a Drive folder link, and the app shows the images in a grid with a preview and download option for each one.
 
-Currently, two official plugins are available:
+![Gallery preview](public/og_thumbnail.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Quick start
 
-## React Compiler
+```bash
+npm install
+cp .env.example .env   # then set VITE_API_KEY
+npm run dev
+```
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Before the gallery shows any images, the Drive folder must be shared and the API key must be set. See the getting-started guide for details.
 
-Note: This will impact Vite dev & build performances.
+## Documentation
 
-## Expanding the ESLint configuration
+| Guide | For | Description |
+| --- | --- | --- |
+| [Getting started](docs/getting-started.md) | Maintainers | Install, configure, and run the app locally |
+| [Usage](docs/usage.md) | End users | How to open a gallery, browse, and download images |
+| [Configuration and security](docs/configuration.md) | Maintainers | `VITE_API_KEY`, key restrictions, and the security risk |
+| [Architecture](docs/architecture.md) | Maintainers | Routes, components, and the Drive API flow |
+| [Troubleshooting](docs/troubleshooting.md) | Both | Common problems, causes, and fixes |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The implementation plan for these docs is in [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md).
